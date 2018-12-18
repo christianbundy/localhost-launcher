@@ -1,7 +1,7 @@
 {
   "name": "localhost-launcher",
   "version": "1.0.0",
-  "description": "",
+  "description": "Self-hosted localhost launcher for distributed applications",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
