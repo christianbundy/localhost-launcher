@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>localhost</title>
+  </head>
+
+  <body>
+    <h1>localhost</h1>
+    <ul>
+      <li><a href="web+ssb:feed:sha256:abcdef">ssb feed</a></li>
+      <li><a href="web+ssb:msg:sha256:abcdef">ssb message</a></li>
+      <li><a href="web+ssb:blob:sha256:abcdef">ssb blob</a></li>
+    </ul>
+    <script>
+      const version = '1.0.0'
+      const appName = 'localhost'
+
+      var url = [
+        location.protocol,
+        '//',
+        location.hostname,
+        location.port ? ':' + location.port : '',
+        '/?s=%s'
+      ].join('')
+
+      const handlerName = `${appName} v${version} (${url})`
+
+      const schemes = [
+        'ssb',
+        'dat'
+      ]
+
+      schemes.forEach(scheme => {
+        const webScheme = `web+${scheme}`
+        window.navigator.registerProtocolHandler(webScheme, url, appName);
+      })
+    </script>
+  </body>
+</html>
