@@ -57,4 +57,4 @@ app.use(async ctx => {
 });
 
 app.listen(port);
-debug(`open http://localhost:${port}`)
+debug(`start app by opening http://localhost:${port}`)
