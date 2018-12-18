@@ -6,6 +6,7 @@ const debug = require('debug')('localhost')
 debug.enabled = true
 
 const app = new Koa();
+const port = 8000
 
 const indexHtml = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8')
 
@@ -25,7 +26,7 @@ app.use(async ctx => {
     debug('web+')
     const redirect ='/' + s.replace('web+', '')
     debug('redirecting to %s', redirect)
-    ctx.status = 301;
+    ctx.status = 302;
     return ctx.redirect(redirect);
   } else if (ctx.request.path === '/') {
     debug('home')
@@ -55,4 +56,5 @@ app.use(async ctx => {
   }
 });
 
-app.listen(8000);
+app.listen(port);
+debug(`open http://localhost:${port}`)
