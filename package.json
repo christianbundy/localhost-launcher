@@ -11,6 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "debug": "^4.1.0",
-    "koa": "^2.6.2"
+    "koa": "^2.6.2",
+    "multiblob": "^1.13.2",
+    "pull-stream": "^3.6.9",
+    "ssb-client": "^4.6.0",
+    "ssb-uri": "^1.0.1"
   }
 }
