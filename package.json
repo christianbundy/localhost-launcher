@@ -10,9 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dat": "^13.11.4",
     "debug": "^4.1.0",
     "koa": "^2.6.2",
+    "mkdirp": "^0.5.1",
     "multiblob": "^1.13.2",
+    "parse-dat-url": "^3.0.1",
     "pull-stream": "^3.6.9",
     "ssb-client": "^4.6.0",
     "ssb-uri": "^1.0.1"
